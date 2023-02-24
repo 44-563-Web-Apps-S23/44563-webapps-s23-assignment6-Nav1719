@@ -24,12 +24,14 @@ function checkPainter(){
     paintername = document.getElementById("painter").value
     guesspaintername = document.getElementById("guessPainter").value
     if(paintername == guesspaintername){
-        alert("You got it right")
         good = good + 1
+        alert("You got it right")
+        
     }
     else{ 
-        alert("Sorry")
         oops=oops+1
+        alert("Sorry")
+        
     }
     document.getElementById("results").innerHTML ="Good Guess : " + good + "\n Incorrect Guess : " + oops
 }
