@@ -27,6 +27,16 @@
         </div>
         <p id="result">We select the Favourite Chocolate </p>
 <br>
+<form>
+    <label for="size">Enter the size</label>
+    <input type="text" id="size" name="size" value="size"> <br>
+    
+    <label for="price">Enter price</label>
+    <input type="text" id="price" name="price"> <br>
+
+    <input type="button" class="btn btn-success" value="Update the box" onclick="updateBox()">
+    <p id="result1">the size and price </p>
+</form>
 <script>
     let my_candy_box={};
     function selectBox(){
@@ -62,5 +72,17 @@ else
 document.getElementById("result").innerHTML = JSON.stringify(my_candy_box)
 }
 </script>
+<script>
+    function updateBox()
+{
+    let size=document.getElementById("size").value;
+    let price=document.getElementById("price").value;
+    my_candy_box["size"]=size;
+    my_candy_box["price"]=price;
+
+    document.getElementById("result1").innerHTML=JSON.stringify(my_candy_box)
+}
+
+   </script>
 </body>
 </html> 
